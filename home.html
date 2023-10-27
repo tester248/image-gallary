@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #biomeImage1,
+        #biomeImage2 {
+            width: 3in;
+            height: auto;
+            transition: transform 0.5s;
+            border-radius: 25px;
+            /* Rounded corners */
+
+        }
+
+        body {
+            background-image: url("assets/map.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .arrow-button {
+            background: none;
+            /* No background */
+            color: black;
+            /* Black color */
+        }
+
+        .hover\:glow:hover {
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200 flex flex-col items-center justify-center h-screen text-white">
+    <h1 class="text-4xl mb-4">Choose a biome</h1>
+    <div class="flex justify-center items-center">
+        <button onclick="changeImage(-1)" class="p-4 arrow-button">❮</button>
+        <img class="mx-4 hover:glow" id="biomeImage1" src="assets/desert.webp" alt="Biome Image"
+            onmouseover="zoomIn('biomeImage1')" onmouseout="zoomOut('biomeImage1')">
+        <img class="mx-4 hover:glow" id="biomeImage2" src="assets/rainforest.jpeg" alt="Biome Image"
+            onmouseover="zoomIn('biomeImage2')" onmouseout="zoomOut('biomeImage2')">
+        <button onclick="changeImage(1)" class="p-4 arrow-button">❯</button>
+    </div>
+
+    <script>
+        var images = ['assets/desert.webp', 'assets/rainforest.jpeg', 'assets/ocean.jpg', 'assets/tundra.webp'];
+        var index = 0;
+
+        function changeImage(direction) {
+            index += direction;
+            if (index < 0) index = images.length - 2; // Adjusted to show two images at a time
+            if (index >= images.length) index = 0;
+            
+            var imageElement1 = document.getElementById('biomeImage1');
+            var imageElement2 = document.getElementById('biomeImage2');
+            
+            imageElement1.src = images[index];
+            imageElement2.src = images[(index + 1) % images.length]; // Added second image
+            
+            imageElement1.onclick = function() { redirect(index); };
+            imageElement2.onclick = function() { redirect((index + 1) % images.length); };
+        }
+
+        function zoomIn(imageId) {
+            document.getElementById(imageId).style.transform = "scale(1.05)";
+        }
+
+        function zoomOut(imageId) {
+            document.getElementById(imageId).style.transform = "scale(1)";
+        }
+
+        function redirect(imageIndex) {
+            var urls = ['desert.html', 'rainforest.html', 'ocean.html', 'tundra.html'];
+            window.location.href = urls[imageIndex];
+        }
+
+        changeImage(0);
+    </script>
+</body>
+
+</html>
