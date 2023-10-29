@@ -8,13 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .parallax {
-            /* The image used */
             background-image: url("assets/ocean.jpg");
-
-            /* Set a specific height */
             min-height: 500px;
-
-            /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -29,31 +24,38 @@
     <div class="parallax"></div>
 
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage" src="assets/towering-trees.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
-            onmouseover="showDescription(0)" onmouseout="hideDescription(0)">
+        <video id="biomeImage" src="assets/Collapse of the Oceans.webm" alt="Biome Image"
+            class="w-1/2 h-screen object-cover" onmouseover="showDescription(0)" onmouseout="hideDescription(1)"
+            autoplay loop muted></video>
+
         <p id="description0" class="hidden w-1/2 p-4">
-            Towering Trees<br>
-            Trees in the emergent layer can grow as tall as 61 meters (200 feet). Foliage is often sparse on tree
-            trunks, but spreads wide as the trees reach the sunny upper layer. Here, moss covers the towering trees of
-            the Great Bear Rainforest in British Columbia, Canada.</p>
+            Most coral reefs grow in tropical waters. The largest coral reef is the Great Barrier Reef, one of the
+            “Seven Natural Wonders of the World,” which extends more than 1,930 kilometers (1,200 miles) off the eastern
+            coast of Australia..</p>
     </div>
 
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage" src="assets/jacksons-chameleon.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
+
+        <img id="biomeImage1" src="assets/jellyfish-sanctuary.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
             onmouseover="showDescription(1)" onmouseout="hideDescription(1)">
+
         <p id="description1" class="hidden w-1/2 p-4">
-            Jackson's Chameleon
-            Animals call the understory home for a variety of reasons. Many take advantage of the dimly lit environment
-            for camouflage. This chameleon (Chamaeleo jacksoni), native to East Africa and an invasive species in
-            Hawaiian rainforests, can even change colors to camouflage itself.
+            <span class="font-semibold text-lg ">Jellyfish Sanctuary</span><br>
+            One of the bioengineers interested in biogenic ocean mixing is National Geographic Emerging Explorer Kakani
+            Katija. “I would say my original interests were on animal swimming or jellyfish propulsion,” she says. “In
+            that investigation, some of this work . . . suggested that swimming animals can impart a lot of [ocean]
+            mixing.” Jellies thrive in every ocean, including the tropical Pacific of the Philippines, above.
         </p>
     </div>
 
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage2" src="assets/smurf-cat.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
-            onmouseover="showDescription(2)" onmouseout="hideDescription(2)">
+        <img id="biomeImage2" src="assets/hol-chan-marine-reserve-belize.jpg" alt="Biome Image"
+            class="w-1/2 h-screen object-cover" onmouseover="showDescription(2)" onmouseout="hideDescription(2)">
         <p id="description2" class="hidden w-1/2 p-4">
-            Smurf Cat<br></p>
+            <span class="font-semibold text-lg">Hol-Chan Marine Reserve, Belize</span><br>
+            Hol-Chan Marine Reserve is Belize's oldest marine protected area (MPA). Hol-Chan means "little channel" in
+            the ancient Mayan language. Hol-Chan is a section of coral reef (called a quebrada) about 23 meters (75
+            feet) wide and nine meters (30 feet) deep.
     </div>
 
     <script>

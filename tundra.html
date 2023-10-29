@@ -8,12 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .parallax {
-            /* The image used */
+
             background-image: url("assets/tundra.webp");
-            /* Set a specific height */
             min-height: 500px;
 
-            /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -28,31 +26,29 @@
     <div class="parallax"></div>
 
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage" src="assets/towering-trees.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
-            onmouseover="showDescription(0)" onmouseout="hideDescription(0)">
-        <p id="description0" class="hidden w-1/2 p-4">
-            Towering Trees<br>
-            Trees in the emergent layer can grow as tall as 61 meters (200 feet). Foliage is often sparse on tree
-            trunks, but spreads wide as the trees reach the sunny upper layer. Here, moss covers the towering trees of
-            the Great Bear Rainforest in British Columbia, Canada.</p>
-    </div>
+        <video id="biomeImage" src="assets/tundra.mp4" alt="Biome Image" class="w-1/2 h-screen object-cover"
+            onmouseover="showDescription(0)" onmouseout="hideDescription(1)" autoplay loop muted></video>
 
+        <p id="description0" class="hidden w-1/2 p-4">
+            Tundras are among the world's coldest, harshest biomes, with extreme temperatures and low rainfall. But
+            these environments in the Arctic and on mountains are far from invulnerable, displaying sensitivity to human
+            disruptions and climate change.</p>
+    </div>
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage" src="assets/jacksons-chameleon.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
+        <img id="biomeImage" src="assets/tikchick-state-park-wildflowers.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
             onmouseover="showDescription(1)" onmouseout="hideDescription(1)">
         <p id="description1" class="hidden w-1/2 p-4">
-            Jackson's Chameleon
-            Animals call the understory home for a variety of reasons. Many take advantage of the dimly lit environment
-            for camouflage. This chameleon (Chamaeleo jacksoni), native to East Africa and an invasive species in
-            Hawaiian rainforests, can even change colors to camouflage itself.
+            <span class="font-semibold text-lg">Wood Tikchick State Park Wildflowers</span><br> 
+            As cold, dry tundras are threatened by warming from climate change, so are many of the plants and animals adapted to live there. Parts of Wood Tikchik State Park, Alaska, United States, are located in tundra.
         </p>
     </div>
 
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage2" src="assets/smurf-cat.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
+        <img id="biomeImage2" src="assets/little-diomede-island.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
             onmouseover="showDescription(2)" onmouseout="hideDescription(2)">
         <p id="description2" class="hidden w-1/2 p-4">
-            Smurf Cat<br></p>
+            <span class="font-semibold text-lg">Little Diomede Island</span><br>
+Tundras—like Little Diomede Island, Alaska, United States—are places of scarcity with little rain and vegetation. These cold, windy environments, however, are threatened by global warming.<br></p>
     </div>
 
     <script>

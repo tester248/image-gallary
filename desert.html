@@ -8,13 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .parallax {
-            /* The image used */
+
             background-image: url("assets/desert.webp");
 
-            /* Set a specific height */
             min-height: 500px;
 
-            /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -32,26 +30,34 @@
         <img id="biomeImage" src="assets/racetrack-playa.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
             onmouseover="showDescription(0)" onmouseout="hideDescription(0)">
         <p id="description0" class="hidden w-1/2 p-4">
-            Racetrack Playa<br>
-            Deserts are arid ecosystems that receive fewer than 25 centimeters (10 inches) of precipitation a year. Death Valley, California, above, receives fewer than 5 centimeters (2 inches) of rainfall every year. However, Death Valley's infrequent rain and extreme temperatures can impact the landscape. This rock's path was created when rainfall produced a shallow lake, which formed a thin layer of ice. The rock was trapped in the ice as it scoured the desert landscape. The ice melted, leaving its tracks in the dried mud..</p>
-    </div>
-
-    <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage" src="assets/jacksons-chameleon.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
-            onmouseover="showDescription(1)" onmouseout="hideDescription(1)">
-        <p id="description1" class="hidden w-1/2 p-4">
-            Jackson's Chameleon
-            Animals call the understory home for a variety of reasons. Many take advantage of the dimly lit environment
-            for camouflage. This chameleon (Chamaeleo jacksoni), native to East Africa and an invasive species in
-            Hawaiian rainforests, can even change colors to camouflage itself.
+            <span class="font-semibold text-lg">Racetrack Playa</span><br>
+            Deserts are arid ecosystems that receive fewer than 25 centimeters (10 inches) of precipitation a year.
+            Death Valley, California, above, receives fewer than 5 centimeters (2 inches) of rainfall every year.
+            However, Death Valley's infrequent rain and extreme temperatures can impact the landscape. This rock's path
+            was created when rainfall produced a shallow lake, which formed a thin layer of ice. The rock was trapped in
+            the ice as it scoured the desert landscape. The ice melted, leaving its tracks in the dried mud..
         </p>
     </div>
 
     <div class="flex justify-center items-center h-screen">
-        <img id="biomeImage2" src="assets/smurf-cat.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
+        <img id="biomeImage" src="assets/oasis-rock-formation.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
+            onmouseover="showDescription(1)" onmouseout="hideDescription(1)">
+        <p id="description1" class="hidden w-1/2 p-4">
+            <span class="font-semibold text-lg">Bahariya Oasis Rock Formation</span><br>
+            A distinctive rock formation rises out of the desert in Bahariya Oasis. Located in Egypt’s Western Desert,
+            Bahariya has yielded important dinosaur fossils and archaeological discoveries.
+        </p>
+    </div>
+
+    <div class="flex justify-center items-center h-screen">
+        <img id="biomeImage2" src="assets/saguaro-cacti.jpg" alt="Biome Image" class="w-1/2 h-screen object-cover"
             onmouseover="showDescription(2)" onmouseout="hideDescription(2)">
         <p id="description2" class="hidden w-1/2 p-4">
-            Smurf Cat<br></p>
+            <span class="font-semibold text-lg"> Saguaro Cacti</span><br>
+            Saguaro cacti rise from the Sonoran Desert at the edge of the Cabeza Prieta Mountains in the U.S. state of
+            Arizona. Saguaro cacti are only found in Arizona, southern California, and the Mexican states of Sonora and
+            Baja California.
+        </p>
     </div>
 
     <script>
